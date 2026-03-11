@@ -5,7 +5,6 @@
 @tailwind utilities;
 
 :root {
-  export default {
   plugins: {
     tailwindcss: {},
     autoprefixer: {},
