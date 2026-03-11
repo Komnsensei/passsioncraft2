@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --bg-void: #0a0a0f;
+  --bg-surface: #111118;
+  --bg-card: #16161f;
+  --bg-card-hover: #1c1c28;
+  --border-dim: #2a2a3a;
+  --border-glow: #4a3f6b;
+  --text-primary: #e8e4f0;
+  --text-secondary: #8b82a0;
+  --text-muted: #4a4460;
+  --accent-coherence: #7c6af0;
+  --accent-somatic: #e05882;
+  --accent-myth: #f0b84a;
+  --accent-bio: #4ade9a;
+  --accent-agent: #60c0f0;
+  
+  /* shadcn variables */
+  --background: 240 10% 4%;
+  --foreground: 250 20% 92%;
+  --card: 240 10% 8%;
+  --card-foreground: 250 20% 92%;
+  --popover: 240 10% 8%;
+  --popover-foreground: 250 20% 92%;
+  --primary: 252 67% 71%;
+  --primary-foreground: 240 10% 4%;
+  --secondary: 240 10% 12%;
+  --secondary-foreground: 250 20% 92%;
+  --muted: 240 10% 12%;
+  --muted-foreground: 250 10% 55%;
+  --accent: 252 67% 71%;
+  --accent-foreground: 240 10% 4%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 10% 16%;
+  --input: 240 10% 16%;
+  --ring: 252 67% 71%;
+  --radius: 0.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-void);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+.glow-coherence { text-shadow: 0 0 12px rgba(124, 106, 240, 0.6); }
+.glow-somatic { text-shadow: 0 0 12px rgba(224, 88, 130, 0.6); }
+.glow-myth { text-shadow: 0 0 12px rgba(240, 184, 74, 0.6); }
+
+.card-void {
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.card-void:hover {
+  border-color: var(--border-glow);
+  background: var(--bg-card-hover);
+}
+
+.prestige-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: 1px solid transparent;
+}
+
+.prestige-pill:hover {
+  transform: scale(1.05);
+}
+
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(124, 106, 240, 0.3);
+  color: var(--text-primary);
+}
