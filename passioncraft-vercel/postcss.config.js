@@ -5,8 +5,4 @@
 @tailwind utilities;
 
 :root {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-}
+{
